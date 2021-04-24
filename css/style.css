@@ -1,0 +1,227 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+:root{
+    --btn: teal;
+    --primary: beige;
+}
+
+body{
+    font-size: 20px;
+    color: var(--primary);
+    overflow-x: hidden;
+    font-family: 'Flamenco', cursive;
+    font-weight: normal;
+}
+
+header{
+    background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('../images/pexels-kawser-hamid-176342.jpg');
+    background-size: cover;
+    background-position: bottom center;
+    background-repeat: no-repeat;
+    height: 100vh;
+    clip-path: polygon(0 0,100% 0,100% 80%, 25% 100%, 0 80%);   
+}
+
+.row{
+    /* max-width: 1180px; */
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+.clearfix::after{
+    content: ".";
+        visibility: hidden;
+        display: block;
+        height: 0;
+        clear: both;
+}
+
+.logo{
+    width: auto;
+    margin: auto;
+    margin-top: 10px;
+}
+
+.main-nav{
+    margin: auto;
+
+}
+
+.animate_animated{
+    animation: slideInDown;
+    animation-duration: 2s;
+}
+
+.main-nav li{
+    display: inline-flex;
+    list-style: none;
+    margin-left: 40px;
+}
+.main-nav li a{
+    padding: 5px 0;
+    text-decoration: none;
+    font-size: 90%;
+    color: var(--primary);
+    text-transform: uppercase;
+}
+
+.main-nav li a:hover{
+    border-bottom: 2px solid var(--btn);
+}
+
+.main-content{
+    margin-top: 50px;
+    width: 100%;
+    display: flex;
+    justify-items: center;
+    flex-direction: column;
+}
+
+h1, h2{
+    font-size: 240%;
+    letter-spacing: 3px;
+    word-spacing: 3px;
+    text-transform: uppercase;
+    text-align: center;
+    font-weight: lighter;
+}
+.btn{
+    text-decoration: none;
+    border-radius: 90px;
+    text-transform: uppercase;
+
+}
+
+.btn-cu{
+    /* background-color: transparent; */
+    margin-top: 30px;
+    color: var(--btn);
+    border: 1px solid;
+    padding: 10px 30px;
+    margin-bottom: 10px;
+    align-self: center;
+} 
+
+.btn-km{
+    /* background-color: transparent; */
+    color: var(--primary);
+    border: 1px solid;
+    padding: 10px 30px;
+    align-self: center;
+
+} 
+
+.btn-cu:hover{
+    background-color: var(--primary);
+}
+
+.btn-km:hover{
+    color: var(--primary);
+    background-color: var(--btn);
+}
+
+.sub-head{
+    animation: colorchange 2s infinite;
+}
+
+@keyframes colorchange{
+    0%{color:var(--primary)}
+    50%{color: var(--btn);}
+    100%{color: var(--primary);}
+}
+
+.mobile-icon{
+    display: none;
+    
+}
+
+/* ////////Responsive Query///////// */ 
+
+ @media only screen and (max-width: 1200px){
+    .row{
+        width: 100px;
+    }
+    .logo{
+        float: right;
+        width: auto;
+        height: 90px;
+    }
+     h1{
+        font-size: 200%;
+    }
+    h2{
+        font-size: 180%;
+    }
+}
+
+
+ @media only screen and (max-width: 840px)
+{
+    z
+    .logo{
+        width: auto;
+        height: 80px;
+    }
+   h1{
+       font-size: 180%;
+   }
+   h2{
+       font-size: 160%;
+   }
+   .btn{
+        font-size: 18px;
+   }
+   .main-nav li a{
+       font-size: 80%;
+   }
+
+
+
+    
+
+    
+}  
+@media only screen and (max-width: 640px)
+{
+    .row{
+        width: 100%;
+    }
+    .logo{
+        float: right;
+        height: 70px;
+        width: auto;
+    }
+   h1{
+       font-size: 120%;
+   }
+   h2{
+       font-size: 100%;
+   }
+   .btn{
+        font-size: 10px;
+   }
+   .main-nav li{
+       display: none;
+   }
+   .mobile-icon{
+       display: block;
+       /* float: right; */
+       padding: 30px 10px;
+       justify-self: center;
+       color:var(--primary)
+   }
+   .mobile-icon:hover{
+       color: var(--btn);
+   }
+
+
+
+    
+
+    
+}  
